@@ -1,0 +1,6 @@
+@echo off
+echo Stopping any process on port 5000...
+for /f "tokens=5" %%a in ('netstat -ano ^| findstr :5000 ^| findstr LISTENING') do taskkill /PID %%a /F 2>nul
+echo Starting server...
+cd /d "%~dp0server"
+npm run dev
