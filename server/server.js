@@ -33,7 +33,7 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 app.use(cors({
-  origin: "https://your-frontend-url.vercel.app",
+  origin: "https://frontend-restaurant-ruby.vercel.app",
   credentials: true
 }));
 app.use(express.json({ limit: '1mb' }));
